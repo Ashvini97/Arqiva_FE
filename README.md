@@ -1,68 +1,56 @@
-# Welcome to the Frontend Tech Test
+# V_Tube (Video Tube)
 
-You can either provide a zipped folder or a link to a public repository for the submission of this test. If you wish to provide a link to a public repository please clone this repository (do not fork) and change the remote so your own repository without reference to "Arqiva". This will help keep this test fair, meaning others cannot use reference to your code.
+A functional web application that allows users to view and search through a list of video contributions. 
 
-## Project Overview
+## Features of the project
 
-Build a simple yet functional web application that allows users to view and search through a list of video contributions. The application should demonstrate your ability to create a responsive, user-friendly interface and integrate with a backend service.
+- Display video contributions (Title, Description, Start and end time, Owner and Status)
+- Search video by Title
+- Filter videos based on Status and Date range (Contribution data dates changed for this filter)
+- Pagination added (14 per page)
+- Responsive (Mobile, Tablet, Computer screens)
+- Unit Testing added
+- Simple Design features added (Colors, Hover effects, Buttons)
 
-## Setup
+## Setup & Installation
 
-This repository includes:
+This repository includes: Backend provided by Merapar and the frontend added for the task. The setup involves steps to be followed for both server and UI. 
 
-- This README file for instructions
-- A very simple Python server which you can spin up locally. Please read the servers [README](./server/README.md) file for installation and running instructions. This server provides an API endpoint which you can use within this test to retrieve `Contributions`
+### 1. Clone the Project
 
-If you have any issues with running the local server then please reach out.
+- git clone https://github.com/Ashvini97/Arqiva_FE.git
+- Use a code editor to proceed with the tasks
 
-## Instructions
+### 2. Start the backend server
 
-Create a `ui` folder; this is where your implementation belongs.
+(Steps given by Merapar. During the task a virtual environment for created for efficiency. The steps followed is as below.
+- Go to the backend folder (cd server)
+- python -m venv venv
+- source venv/bin/activate
+- pip install -r requirements.txt
+- fastapi dev main.py
 
-Within the `ui` folder set up the project with your chosen frontend JS/TS framework (React.js, Vue.js or other).
+Make sure the server is started without any errors
 
-Build a homepage that should show a list of contributions, retrieved from the provided backend API.
+### 3. Start the Frontend 
 
-- For each contribution show its:
-  - Title
-  - Description
-  - Start time; displaying the date and time in the users locale
-  - End time; displaying the date and time in the users locale
-  - Owner (the producer of the contribution)
-  - Status; is the contribution `Complete` (in the past), `Active` (currently being aired) or `Scheduled` (in the future)
-- Shows 14 contributions at once
-- The contributions list should show with:
-  - 3 contributions per row on desktop
-  - 2 contributions per row on tablet
-  - 1 contributions per row on mobile
-- Have a working search bar at the top, that filters contributions by title
-- Add pagination
+- Go to the frontend folder (cd ui)
+- npm install 
+  ( Note: if you face any dependency conflicts due to the date-fns, react-date-range, or jest, use below instead of npm install.
+  npm install --legacy-peer-deps )
+- npm start
 
-Include a README file with instructions on how to run the project and any other relevant information.
+The UI will run at: http://localhost:3000/
 
-A design file has not been provided. We expect the UI to be clean, intuitive and easy to read, but we do not expect you to be a designer so do not worry about flare. If you have a keen eye and enjoy the design aspect then the world is your oyster.
+![image](https://github.com/user-attachments/assets/06766bbc-65c1-42eb-a562-4e7d254de6ad)
 
-Feel free to modify the contributions data e.g. start and end times. Or add entries.
+![image](https://github.com/user-attachments/assets/32330caf-6003-4f57-8823-b52cd13970bf)
 
-### Bonus
 
-- Upgrade the search functionality so that you can filter by more than just title.
-- Persist searches and pagination within the URL
-- Add any extra features that showcase your skills
 
-## Submission
 
-Email back to the email address that provided this task with either:
 
-- A link to a public repository where you have pushed your code
-- A zipped folder containing this repository
 
-Please keep the provided Server folder within your submission
 
-## Evaluation Criteria
 
-- Code Quality: Clean and well-organized.
-- Functionality: The application meets all the specified requirements.
-- User Interface: Usability of the user interface.
-- Performance: Efficient handling of data and UI updates.
-- Best Practices: Use of modern development best practices and tools (e.g., linting, testing).
+
