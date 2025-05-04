@@ -42,6 +42,11 @@ Make sure the server is started without any errors
 
 The UI will run at: http://localhost:3000/
 
+### 4. Unit testing of contribution card
+
+- npm test
+  
+
 ![image](https://github.com/user-attachments/assets/06766bbc-65c1-42eb-a562-4e7d254de6ad)
 
 ![image](https://github.com/user-attachments/assets/32330caf-6003-4f57-8823-b52cd13970bf)
